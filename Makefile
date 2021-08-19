@@ -5,18 +5,14 @@ install:
 
 .PHONY: lint
 lint:
-	poetry run flake8 cdk/ src/ tests/
-	poetry run isort --check-only --profile black cdk/ src/ tests/
-	poetry run black --check --diff cdk/ src/ tests/
+	poetry run flake8 cdk/ experiment_image/
+	poetry run isort --check-only --profile black cdk/ experiment_image/
+	poetry run black --check --diff cdk/ experiment_image/
 
 .PHONY: format
 format:
-	poetry run isort --profile black cdk/ src/ tests/
-	poetry run black cdk/ src/ tests/
-
-.PHONY: unit-tests
-unit-tests:
-	poetry run pytest -s tests/unit/
+	poetry run isort --profile black cdk/ experiment_image/
+	poetry run black cdk/ experiment_image/
 
 .PHONY: diff
 diff:

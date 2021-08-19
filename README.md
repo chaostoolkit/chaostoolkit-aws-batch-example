@@ -1,4 +1,6 @@
-# TemplateProject
+# Chaos Toolkit AWS Batch Example
+
+AWS CDK Project to be used in conjunction with: http://chaostoolkit.org/reference/tutorials/batch/
 
 ## Development 🧑‍💻
 
@@ -15,7 +17,7 @@ If you're developing on MacOS, the above can be installed using [homebrew](https
 
 If you're developing on Windows, I'd recommend using either [Git BASH](https://gitforwindows.org/) or [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
-_I provide a [`Makefile`](./Makefile) to try and abstract away some of the commonly used commands, so you may want to get `make` also_
+_We provide a [`Makefile`](./Makefile) to try and abstract away some of the commonly used commands, so you may want to get `make` also_
 
 ### `.env` file
 
@@ -34,15 +36,31 @@ A file named `example.env` is provided, copy this and fill it out with your valu
 
 To get setup for overall development, install the above [requirements](#requirements) first.
 
-To remove the filler values from this template, replace the header `Template Project` in
-[README.md](./README.md) and then also replace `TemplateProject` in both
-[app.py](./cdk/app.py) and [stack.py](./cdk/stack.py) with `YourProjectName`.
-
 You can then install the dependencies for development with:
 
 ```console
 make install
 ```
+
+To check what you'll be deploying, run:
+
+```console
+make diff
+```
+
+To deploy the infrastructure, run:
+
+```console
+make deploy
+```
+
+Once done, you can run:
+
+```console
+make destroy
+```
+
+To clean up the infrastructure
 
 ### Makefile goodness 🤌
 
@@ -59,10 +77,6 @@ A `Makefile` is available in the root of the repository to abstract away commonl
 **`make format`**
 
 > This will perform a run of `isort` and `black`, this **will** modify files if issues were found
-
-**`make unit-tests`**
-
-> This will run `pytest` within the `tests/unit` directory
 
 **`make diff`**
 

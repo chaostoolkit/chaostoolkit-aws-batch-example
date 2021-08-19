@@ -1,0 +1,34 @@
+{
+    "title": "Running Chaos Toolkit from AWS Batch",
+    "description": "N/A",
+    "tags": [],
+    "steady-state-hypothesis": {
+        "title": "EC2 is RUNNING",
+        "probes": [
+            {
+                "type": "probe",
+                "name": "instance_state",
+                "provider": {
+                    "type": "python",
+                    "module": "chaosaws.ec2.probes",
+                    "func": "instance_state",
+                    "arguments": {
+                        "state": "running",
+                        "instance_ids": [
+                            "${instance_id}"
+                        ],
+                        "filters": []
+                    }
+                },
+                "tolerance": true
+            }
+        ]
+    },
+    "method": [],
+    "configuration": {
+        "instance_id": {
+            "type": "env",
+            "key": "INSTANCE_ID"
+        }
+    }
+}
