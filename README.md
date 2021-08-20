@@ -6,9 +6,9 @@ AWS CDK Project to be used in conjunction with: http://chaostoolkit.org/referenc
 
 ### Requirements 📝
 
-* [Python 3.6.2+](https://www.python.org/downloads/) (I recommend using [pyenv](https://github.com/pyenv/pyenv) to handle Python versions)
+* [Python 3.6.2+](https://www.python.org/downloads/) (We recommend using [pyenv](https://github.com/pyenv/pyenv) to handle Python versions)
 * [Poetry](https://github.com/python-poetry/poetry)
-* [Node 14](https://nodejs.org/en/) (I recommend using NVM [Node Version Manager](https://github.com/nvm-sh/nvm))
+* [Node 14](https://nodejs.org/en/) (We recommend using NVM [Node Version Manager](https://github.com/nvm-sh/nvm))
 * [AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html) - There is a `package.json` in the cdk examples, it's recommended to run `npm install` in the examples directories and make use of `npx <command>` rather than globally installing AWS CDK
 * [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
 * [Docker](https://docs.docker.com/get-docker/)
